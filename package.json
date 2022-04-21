@@ -1,0 +1,23 @@
+{
+  "name": "@hexlet/code",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/Tinagru/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Tinagru/frontend-project-lvl1/actions)",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+ },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@ghub:Tinagru/frontend-project-lvl1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ci": "^2.1.1",
+    "make": "^0.8.1"
+  }
+}
