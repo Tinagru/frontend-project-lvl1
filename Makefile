@@ -12,3 +12,5 @@ publish:
 
 lint:
 	npx eslint .
+
+https://asciinema.org/a/OG7ZxKNCtGeiv7lrUu18tAC9m
