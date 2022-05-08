@@ -1,38 +1,30 @@
 import game from '../index.js';
 
+import getRandomValue from '../functions.js';
+
 const task = 'What is the result of the expression?';
 
-const getRandomNumber = () => Math.floor(Math.random() * 100);
-const getRandomOperator = () => {
-  let RandomOperator = '';
-  const possible = '+-*';
-  for (let i = 0; i < 1; i += 1) {
-    RandomOperator += possible.charAt(Math.floor(Math.random() * possible.length));
-  }
-  return RandomOperator;
-};
+const operators = '+-*';
 
-const getData = () => {
-  const num1 = getRandomNumber();
-  const num2 = getRandomNumber();
-  const operator = getRandomOperator();
-  let result;
+const calculation = (num1, num2, operator) => {
   switch (operator) {
     case '+':
-      result = num1 + num2;
-      break;
+      return num1 + num2;
     case '-':
-      result = num1 - num2;
-      break;
+      return num1 - num2;
     case '*':
-      result = num1 * num2;
-      break;
+      return num1 * num2;
     default:
       return false;
   }
-  const answer = String(result);
+};
+
+const getData = () => {
+  const num1 = getRandomValue(0, 100);
+  const num2 = getRandomValue(0, 100);
+  const operator = operators[getRandomValue(0, operators.length - 1)];
+  const answer = `${calculation(num1, num2, operator)}`;
   const question = `${num1} ${operator} ${num2}`;
   return { question, answer };
 };
-
 export default () => game(task, getData);

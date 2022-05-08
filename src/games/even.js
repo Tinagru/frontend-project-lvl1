@@ -1,11 +1,14 @@
 import game from '../index.js';
 
+import getRandomValue from '../functions.js';
+
 const task = 'Answer "yes" if number even otherwise answer "no".';
 const isEven = (num) => num % 2 === 0;
+const min = 1;
+const max = 100;
 
 const getData = () => {
-  const getRandomNumber = () => Math.floor(Math.random() * 100);
-  const question = getRandomNumber();
+  const question = getRandomValue(min, max);
   const answer = isEven(question) ? 'yes' : 'no';
   return { question, answer };
 };
