@@ -1,5 +1,5 @@
 import game from '../index.js';
-import getRandomValue from '../functions.js';
+import getRandomValue from '../getRandomValue.js';
 
 const minStep = 1;
 const maxStep = 9;

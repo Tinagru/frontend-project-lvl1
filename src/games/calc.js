@@ -1,10 +1,10 @@
 import game from '../index.js';
 
-import getRandomValue from '../functions.js';
+import getRandomValue from '../getRandomValue.js';
 
 const task = 'What is the result of the expression?';
 
-const operators = '+-*';
+const operators = ['+', '-', '*'];
 
 const calculation = (num1, num2, operator) => {
   switch (operator) {
